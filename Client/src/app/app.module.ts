@@ -6,17 +6,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HappinessComponent } from './happiness/happiness.component';
 
+import { RouterModule } from '@angular/router';
+
+const routes = [
+  { path: '', component: HomeComponent },
+  { path: '/happiness', component: HappinessComponent },
+];
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    HappinessComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, HomeComponent, HappinessComponent],
+  imports: [BrowserModule, AppRoutingModule, RouterModule.forRoot(routes)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
