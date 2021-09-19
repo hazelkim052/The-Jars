@@ -3,6 +3,7 @@ import { HappyService } from '../../service/happy.service';
 import { MatDialog } from '@angular/material/dialog';
 import { HappinessDialogComponent } from '../happiness-dialog/happiness-dialog.component';
 import * as dayjs from 'dayjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-happiness',
@@ -13,12 +14,21 @@ export class HappinessComponent implements OnInit {
   date: any;
   story: any;
   stories: any;
-  constructor(public happyService: HappyService, public dialog: MatDialog) {}
+
+  constructor(
+    public happyService: HappyService,
+    private router: Router,
+    public dialog: MatDialog
+  ) {}
 
   ngOnInit(): void {
     this.happyService
       .getStories()
       .subscribe((stories) => (this.stories = stories));
+  }
+
+  try() {
+    this.router.navigateByUrl('/');
   }
 
   post(story: any, date: any) {
