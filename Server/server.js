@@ -2,6 +2,15 @@ const express = require('express');
 const connectDB = require('./DB/connection')
 const app = express();
 
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions))
+
 connectDB();
 app.use(express.json({ extended: false }));
 app.use('/api/userModel', require('./Service/user'));
