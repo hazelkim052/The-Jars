@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, HappinessComponent],
@@ -18,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     MatCardModule,
     MatInputModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent],
