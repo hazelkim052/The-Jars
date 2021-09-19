@@ -15,4 +15,10 @@ export class HomeComponent implements OnInit {
   try () {
     this.router.navigateByUrl('/happiness')
   }
+  motivate () {
+    this.router.navigateByUrl('/motivate')
+  }
+  sad () {
+    this.router.navigateByUrl('/sad')
+  }
 };

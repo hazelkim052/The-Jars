@@ -16,9 +16,11 @@ import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MotivateComponent } from './component/motivate/motivate.component';
+import { SadComponent } from './component/sad/sad.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HappinessComponent],
+  declarations: [AppComponent, HomeComponent, HappinessComponent, MotivateComponent, SadComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

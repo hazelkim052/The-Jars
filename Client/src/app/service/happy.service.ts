@@ -18,4 +18,26 @@ export class HappyService {
         console.log(res);
       });
   }
+
+  postMotivation(story: any, date: any) {
+    console.log('FROM API: ', story);
+    let input = { story: story, date: date };
+    console.log('json input', input);
+    this.http
+      .post('http://localhost:3000/api/userMotivation', input)
+      .subscribe((res) => {
+        console.log(res);
+      });
+  }
+
+  postSadness(story: any, date: any) {
+    console.log('FROM API: ', story);
+    let input = { story: story, date: date };
+    console.log('json input', input);
+    this.http
+      .post('http://localhost:3000/api/userSadStory', input)
+      .subscribe((res) => {
+        console.log(res);
+      });
+  }
 }
