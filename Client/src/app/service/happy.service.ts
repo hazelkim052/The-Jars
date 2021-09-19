@@ -8,9 +8,11 @@ import { Subject } from 'rxjs';
 export class HappyService {
   constructor(private http: HttpClient) {}
 
-  postHappyRecord(record: any) {
-    console.log('FROM API: ', record);
-    this.http.post('https://localhost:4200/happy', record).subscribe((res) => {
+  postHappyStory(story: any, date: any) {
+    console.log('FROM API: ', story);
+    let input = { story: story, date: date };
+    console.log('json input', input);
+    this.http.post('https://localhost:4200/happy', input).subscribe((res) => {
       console.log(res);
     });
   }
