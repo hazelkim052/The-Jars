@@ -1,12 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+html,
 body {
-  margin: 0;
+  height: 100%;
+  margin: 10px;
   background-color: beige;
-}
-font-face {
-  font-family: NunitoSans;
-  src: url(assets/font/NunitoSans-Black.ttf) format("opentype");
+  font-family: "Nunito Sans", sans-serif;
 }
 
 html, body { height: 100%; }
