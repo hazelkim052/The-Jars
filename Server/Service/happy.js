@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Happy = require('../DB/Happy');
 const route = express.Router();
 
-route.post('/', async (req, res) => {
+route.post('/happy', async (req, res) => {
   const { story, date } = req.body;
   let user = {};
   user.story = story;
