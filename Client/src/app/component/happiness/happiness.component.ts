@@ -13,7 +13,9 @@ export class HappinessComponent implements OnInit {
   constructor(public happyService: HappyService) {}
 
   ngOnInit(): void {
-    this.stories = this.happyService.getStories;
+    this.happyService
+      .getStories()
+      .subscribe((stories) => (this.stories = stories));
   }
 
   post(story: any, date: any) {
@@ -23,5 +25,8 @@ export class HappinessComponent implements OnInit {
     this.happyService.postHappyStory(story, date);
   }
 
-  pick() {}
+  pick() {
+    var story = this.stories[Math.floor(Math.random() * this.stories.length)];
+    console.log(story);
+  }
 }

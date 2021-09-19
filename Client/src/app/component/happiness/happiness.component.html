@@ -16,7 +16,7 @@
         <img class="note"style="display: inline-block;)" src="././assets/note.png" height="200px" weight="auto">
     </div>
     <div style="display: inline-block; ">
-        <img class="jar"style="display: inline-block;)" src="././assets/happy_jar.png" height="750px" weight="auto">
+        <img class="jar"style="display: inline-block;)" src="././assets/happy_jar.png" (click)="pick()" height="750px" weight="auto">
     </div>
     <div style="vertical-align: top; display: inline-block;">
         <mat-card class="mat-elevation-z0" style="width: 400px;">
@@ -30,7 +30,8 @@
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
             </div>
-            <button mat-stroked-button class="button" style="font-size: 20px">save my happiness</button>
+            <button mat-stroked-button (click)="post(story.value,date)" class="button" style="font-size: 20px">save my
+                happiness</button>
         </mat-card>
     </div>
 </div>
