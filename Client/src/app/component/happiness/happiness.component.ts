@@ -9,9 +9,12 @@ import { HappyService } from '../../service/happy.service';
 export class HappinessComponent implements OnInit {
   date: any;
   story: any;
+  stories: any;
   constructor(public happyService: HappyService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.stories = this.happyService.getStories;
+  }
 
   post(story: any, date: any) {
     console.log('post test');
@@ -19,4 +22,6 @@ export class HappinessComponent implements OnInit {
     console.log('date', date);
     this.happyService.postHappyStory(story, date);
   }
+
+  pick() {}
 }

@@ -18,4 +18,8 @@ export class HappyService {
         console.log(res);
       });
   }
+
+  getStories() {
+    return this.http.get('http://localhost:3000/api/stories');
+  }
 }
