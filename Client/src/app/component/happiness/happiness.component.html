@@ -1,27 +1,32 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grechen+Fuemen&display=swap" rel="stylesheet">
 </head>
 <h1 class="happinessjar" style="font-size:4rem; font-weight: 500;">My Happiness Jar</h1>
 <div>
     <div style="display: inline-block; ">
-        <img style="display: inline-block;" src="././assets/happy_jar.png" height="700px" weight="auto">
+        <img class="jar"style="display: inline-block;" src="././assets/happy_jar.png" height="700px" weight="auto">
     </div>
     <div style="vertical-align: top; display: inline-block;">
-        <mat-card style="width: 400px">
-            <mat-card-title>Record Your Happiness</mat-card-title>
-
-            <textarea #story style="margin: 5px;" matInput placeholder="Record your happiness.."></textarea>
+        <mat-card class="mat-elevation-z0" style="width: 400px">
+            <mat-card-title style="font-size: 38px;">Record Your Happiness..</mat-card-title>
+            <textarea style="margin: 10px; font-size: 25px;" matInput placeholder="Enter here!"></textarea>
             <div>
                 <mat-form-field appearance="fill">
-                    <mat-label>Choose a date</mat-label>
-                    <input matInput [matDatepicker]="picker" [(ngModel)]="date" readonly>
+                    <mat-label class="mat-label" style="font-size: 20px">date of happiness</mat-label>
+                    <input matInput [matDatepicker]="picker">
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
             </div>
-            <button mat-stroked-button (click)="post(story.value,date)">Record</button>
+            <button mat-stroked-button class="button" style="font-size: 20px">Record</button>
         </mat-card>
     </div>
 
