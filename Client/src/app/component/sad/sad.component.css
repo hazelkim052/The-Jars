@@ -1,0 +1,27 @@
+.mat-card {
+    margin-top: 40%;
+    background-color: beige;
+  }
+  
+  .happinessjar{
+    font-family: 'Grechen Fuemen', cursive;
+    margin-top: 5%;
+    text-align: center;
+  }
+  
+  .jar{
+    margin-left: 40%
+  }
+  
+  .mat-elevation-z0{
+    margin-left: 75%;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .mat-label{
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .button{
+    font-family: 'Dancing Script', cursive;
+  }

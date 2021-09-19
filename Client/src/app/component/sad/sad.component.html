@@ -12,30 +12,28 @@
 </head>
 <div>
     <img src="././assets/home.png" height="50px" weight="auto" (click)="try()">
-    <h1 class="happinessjar" style="font-size:4rem; font-weight: 500;">My Happiness Jar</h1>
+    <h1 class="happinessjar" style="font-size:4rem; font-weight: 500;">My Unfortunate Events</h1>
 </div>
 
 <div>
     <div style="display: inline-block; ">
-        <img class="note"style="display: inline-block;)" src="././assets/note.png" height="200px" weight="auto">
-    </div>
-    <div style="display: inline-block; ">
-        <img class="jar"style="display: inline-block;)" src="././assets/happy_jar.png" (click)="pick()" height="750px" weight="auto">
+        <img class="jar" style="display: inline-block;" src="../../../assets/sad.png" height="700px" weight="auto">
     </div>
     <div style="vertical-align: top; display: inline-block;">
-        <mat-card class="mat-elevation-z0" style="width: 400px;">
-            <mat-card-title style="font-size: 38px;">Record Your Happiness..</mat-card-title>
+        <mat-card class="mat-elevation-z0" style="width: 400px">
+            <mat-card-title style="font-size: 38px;">Record Your Unfortunate Events..</mat-card-title>
             <textarea #story style="margin: 10px; font-size: 25px;" matInput placeholder="Enter here!"></textarea>
             <div>
                 <mat-form-field appearance="fill">
-                    <mat-label class="mat-label" style="font-size: 20px">date of happiness</mat-label>
+                    <mat-label class="mat-label" style="font-size: 20px">date of the event</mat-label>
                     <input matInput [matDatepicker]="picker" [(ngModel)]="date" readonly>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
             </div>
-            <button mat-stroked-button (click)="post(story.value,date);" class="button" style="font-size: 20px">save my
-                happiness</button>
+            <button mat-stroked-button (click)="post(story.value,date)" class="button"
+                style="font-size: 20px">Record</button>
         </mat-card>
     </div>
+
 </div>
