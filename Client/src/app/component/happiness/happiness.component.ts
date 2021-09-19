@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HappyService } from '../../service/happy.service';
+import { MatDialog } from '@angular/material/dialog';
+import { HappinessDialogComponent } from '../happiness-dialog/happiness-dialog.component';
+import * as dayjs from 'dayjs';
 
 @Component({
   selector: 'app-happiness',
@@ -10,7 +13,7 @@ export class HappinessComponent implements OnInit {
   date: any;
   story: any;
   stories: any;
-  constructor(public happyService: HappyService) {}
+  constructor(public happyService: HappyService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.happyService
@@ -19,14 +22,17 @@ export class HappinessComponent implements OnInit {
   }
 
   post(story: any, date: any) {
-    console.log('post test');
-    console.log('story', story);
-    console.log('date', date);
+    date = dayjs(date).format('MMMM DD, YYYY');
     this.happyService.postHappyStory(story, date);
   }
 
   pick() {
-    var story = this.stories[Math.floor(Math.random() * this.stories.length)];
-    console.log(story);
+    const dialogRef = this.dialog.open(HappinessDialogComponent, {
+      width: '250px',
+      height: '150px',
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+    });
   }
 }

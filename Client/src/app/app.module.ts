@@ -16,9 +16,11 @@ import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { HappinessDialogComponent } from './component/happiness-dialog/happiness-dialog.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HappinessComponent],
+  declarations: [AppComponent, HomeComponent, HappinessComponent, HappinessDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     MatSidenavModule,
     HttpClientModule,
     FormsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
