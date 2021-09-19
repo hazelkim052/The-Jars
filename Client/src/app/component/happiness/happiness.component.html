@@ -13,10 +13,10 @@
 <h1 class="happinessjar" style="font-size:4rem; font-weight: 500;">My Happiness Jar</h1>
 <div>
     <div style="display: inline-block; ">
-        <img class="jar" style="display: inline-block;" src="././assets/happy_jar.png" height="700px" weight="auto">
+        <img class="jar"style="display: inline-block;)" src="././assets/happy_jar.png" height="750px" weight="auto">
     </div>
     <div style="vertical-align: top; display: inline-block;">
-        <mat-card class="mat-elevation-z0" style="width: 400px">
+        <mat-card class="mat-elevation-z0" style="width: 400px;">
             <mat-card-title style="font-size: 38px;">Record Your Happiness..</mat-card-title>
             <textarea #story style="margin: 10px; font-size: 25px;" matInput placeholder="Enter here!"></textarea>
             <div>
@@ -27,9 +27,7 @@
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
             </div>
-            <button mat-stroked-button (click)="post(story.value,date)" class="button"
-                style="font-size: 20px">Record</button>
+            <button mat-stroked-button class="button" style="font-size: 20px">save my happiness</button>
         </mat-card>
     </div>
-
 </div>
