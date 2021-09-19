@@ -1,6 +1,6 @@
 .mat-card {
   margin-top: 40%;
-  background-color: beige;
+  background-color: transparent;
 }
 
 .happinessjar{
@@ -11,6 +11,10 @@
 
 .jar{
   margin-left: 40%
+}
+
+.note{
+  margin-left: 130%
 }
 
 .mat-elevation-z0{

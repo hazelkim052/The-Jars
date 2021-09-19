@@ -11,8 +11,14 @@ export class HappinessComponent implements OnInit {
   date: any;
   story: any;
   constructor(public happyService: HappyService, private router: Router) {}
+  stories: any;
+  
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.happyService
+      .getStories()
+      .subscribe((stories) => (this.stories = stories));
+  }
 
   try () {
     this.router.navigateByUrl('/')
@@ -23,5 +29,10 @@ export class HappinessComponent implements OnInit {
     console.log('story', story);
     console.log('date', date);
     this.happyService.postHappyStory(story, date);
+  }
+
+  pick() {
+    var story = this.stories[Math.floor(Math.random() * this.stories.length)];
+    console.log(story);
   }
 }
