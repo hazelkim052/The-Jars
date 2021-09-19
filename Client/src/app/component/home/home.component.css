@@ -10,3 +10,17 @@
     margin-left: 15px;
     text-align: center;
 }
+
+.example-container {
+    width: 1000px;
+    height: 1000px;
+    margin: 12px;
+    border: 1px solid #555;
+  }
+  
+  mat-drawer-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
