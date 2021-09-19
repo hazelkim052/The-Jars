@@ -6,6 +6,7 @@ body {
   margin: 10px;
   background-color: beige;
   font-family: 'Grechen Fuemen', cursive;
+  overflow: hidden;
 }
 
 html, body { height: 100%; }
