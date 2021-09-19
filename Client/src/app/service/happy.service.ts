@@ -12,8 +12,10 @@ export class HappyService {
     console.log('FROM API: ', story);
     let input = { story: story, date: date };
     console.log('json input', input);
-    this.http.post('https://localhost:4200/happy', input).subscribe((res) => {
-      console.log(res);
-    });
+    this.http
+      .post('http://localhost:3000/api/userStory', input)
+      .subscribe((res) => {
+        console.log(res);
+      });
   }
 }
