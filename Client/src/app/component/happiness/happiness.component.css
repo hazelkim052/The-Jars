@@ -1,3 +1,10 @@
 .mat-card {
   border-top-style: ridge;
+  margin-top: 40%;
+}
+
+.happinessjar{
+  font-family: 'Grechen Fuemen', cursive;
+  margin-top: 5%;
+  text-align: center;
 }

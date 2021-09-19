@@ -5,15 +5,14 @@
 }
 
 .my-jar {
-    margin-top: 100px;
+    margin-top: 50px;
     font-family: 'Grechen Fuemen', cursive;
-    margin-left: 15px;
     text-align: center;
 }
 
 .example-container {
-    width: 1000px;
-    height: 1000px;
+    width: 100%;
+    height: 100%;
     margin: 12px;
     border: 1px solid #555;
   }
