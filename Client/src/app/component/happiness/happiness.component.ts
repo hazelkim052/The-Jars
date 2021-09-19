@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./happiness.component.css'],
 })
 export class HappinessComponent implements OnInit {
+  picker: any;
   constructor() {}
 
   ngOnInit(): void {}
